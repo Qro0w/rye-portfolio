@@ -1,150 +1,101 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, BriefcaseBusiness, Speech, Users } from "lucide-react";
 import PageTransition from "../components/PageTransition";
-
-const highlights = [
-  {
-    icon: <Users size={18} />,
-    title: "Leadership",
-    text: "Experience guiding organizations, managing people, and helping teams stay aligned.",
-  },
-  {
-    icon: <Speech size={18} />,
-    title: "Communication",
-    text: "Built confidence through workshops, presentations, hospitality, and public-facing roles.",
-  },
-  {
-    icon: <BriefcaseBusiness size={18} />,
-    title: "Execution",
-    text: "Strong in coordination, planning, and turning ideas into actual progress.",
-  },
-];
 
 export default function Home() {
   return (
     <PageTransition>
-      <section className="relative min-h-[82vh] overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[-8%] top-[8%] h-72 w-72 rounded-full bg-purple-700/20 blur-3xl" />
-          <div className="absolute right-[-10%] top-[20%] h-80 w-80 rounded-full bg-fuchsia-600/15 blur-3xl" />
-          <div className="absolute bottom-[-4%] left-[28%] h-64 w-64 rounded-full bg-violet-500/10 blur-3xl" />
-        </div>
+      <section className="relative overflow-hidden">
 
-        <div className="relative grid items-center gap-12 py-10 md:grid-cols-[1.15fr_0.85fr] md:py-16">
+        {/* HERO */}
+        <div className="py-8 md:py-16 grid gap-10 md:grid-cols-2 items-center">
+
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.04 }}
-              className="mb-5 inline-flex rounded-full border border-purple-400/25 bg-white/5 px-4 py-2 text-sm text-purple-200 backdrop-blur"
-            >
-              Modern Hybrid • Dark Luxury Purple
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mb-3 text-sm font-semibold uppercase tracking-[0.32em] text-purple-200"
-            >
+            <p className="text-purple-200 uppercase text-sm tracking-[0.28em]">
               Leadership Backed by Technical Experience
-            </motion.p>
+            </p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.16 }}
-              className="max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl"
-            >
-              I help teams, clients, and ideas move forward with clarity.
-            </motion.h1>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-4">
+              I help teams, systems, and ideas move forward.
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.24 }}
-              className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg"
-            >
-              I started with technical foundations in IT and grew into roles centered on
-              leadership, communication, coordination, and execution. My value comes from
-              understanding both the people side and the technical side of a project.
-            </motion.p>
+            <p className="text-zinc-300 mt-6 leading-8 max-w-xl">
+              A BSIT candidate with real experience in leadership,
+              project coordination, communication, and technical execution.
+              Built projects, led organizations, and helped turn ideas into results.
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-8 flex flex-wrap gap-4"
-            >
+            <div className="flex flex-wrap gap-4 mt-8">
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-purple-600 to-fuchsia-600 px-6 py-3 font-medium text-white shadow-[0_12px_30px_rgba(98,0,255,0.28)] transition hover:scale-[1.02]"
+                className="px-6 py-3 rounded-2xl bg-purple-600 hover:bg-purple-500 transition"
               >
-                View My Work
-                <ArrowRight
-                  size={18}
-                  className="transition group-hover:translate-x-1"
-                />
+                View Projects
               </Link>
 
               <Link
                 to="/contact"
-                className="rounded-2xl border border-white/12 bg-white/5 px-6 py-3 font-medium text-zinc-200 backdrop-blur transition hover:bg-white/10"
+                className="px-6 py-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
               >
-                Let’s Work Together
+                Contact Me
               </Link>
-            </motion.div>
+                <a
+              href="/My%20Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-2xl border border-purple-400/30 bg-white/5 hover:bg-white/10 transition"
+             >
+              Resume / CV
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.36 }}
-              className="mt-8 grid gap-3 text-sm text-zinc-300"
-            >
-              <p>📍 PUT ADDRESS HERE</p>
-              <p>📞 PUT PHONE NUMBER HERE</p>
-              <p>📧 PUT EMAIL HERE</p>
-            </motion.div>
+            {/* METRICS */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+              {[
+                ["6+", "Projects"],
+                ["2+", "Leadership Roles"],
+                ["5+", "Certificates"],
+                ["100+", "People Engaged"],
+              ].map(([num, label], i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl p-4 bg-white/5 border border-white/10"
+                >
+                  <p className="text-2xl font-bold text-purple-300">{num}</p>
+                  <p className="text-sm text-zinc-400 mt-1">{label}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.18 }}
-            className="relative"
-          >
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-purple-500/25 to-fuchsia-500/10 blur-3xl" />
-            <div className="relative flex h-[470px] items-center justify-center rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] text-center text-zinc-400 backdrop-blur-xl">
-              <div className="rounded-3xl border border-dashed border-purple-300/35 px-8 py-12">
-                PUT PROFESSIONAL PHOTO HERE
-                <br />
-                OR REPLACE WITH IMG TAG
-              </div>
+          {/* PHOTO */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-purple-700/20 blur-3xl rounded-full"></div>
+
+            <div className="relative h-[420px] rounded-[2rem] border border-white/10 bg-white/5 flex items-center justify-center text-zinc-500">
+              PUT PROFESSIONAL PHOTO HERE
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.42 }}
-          className="mt-4 grid gap-4 md:grid-cols-3"
-        >
-          {highlights.map((item) => (
+        {/* CREDIBILITY STRIP */}
+        <div className="grid md:grid-cols-4 gap-4 mt-6">
+          {[
+            "CEO of SwuDevs",
+            "Built Real Systems",
+            "Workshop Leader",
+            "Open to Opportunities",
+          ].map((item, i) => (
             <div
-              key={item.title}
-              className="rounded-[1.6rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-purple-400/25 hover:bg-white/[0.075]"
+              key={i}
+              className="rounded-2xl px-5 py-4 bg-white/5 border border-white/10 text-center text-zinc-300"
             >
-              <div className="mb-4 inline-flex rounded-xl border border-purple-400/20 bg-purple-500/10 p-3 text-purple-200">
-                {item.icon}
-              </div>
-              <h2 className="text-xl font-semibold text-white">{item.title}</h2>
-              <p className="mt-3 leading-7 text-zinc-300">{item.text}</p>
+              {item}
             </div>
           ))}
-        </motion.div>
+        </div>
+
       </section>
     </PageTransition>
   );
