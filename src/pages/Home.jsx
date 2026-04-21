@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
+import profilePic from "../assets/home/Pic.jpg";
 
 export default function Home() {
   return (
@@ -73,8 +74,12 @@ export default function Home() {
           <div className="relative">
             <div className="absolute inset-0 bg-purple-700/20 blur-3xl rounded-full"></div>
 
-            <div className="relative h-[420px] rounded-[2rem] border border-white/10 bg-white/5 flex items-center justify-center text-zinc-500">
-              PUT PROFESSIONAL PHOTO HERE
+            <div className="relative h-[420px] rounded-[2rem] border border-white/10 overflow-hidden bg-white/5">
+              <img
+                src={profilePic}
+                alt="Rye Lao Guico"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
