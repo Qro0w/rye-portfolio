@@ -66,7 +66,7 @@ export default function Navbar() {
                     Rye Lao Guico
                   </p>
                   <p className="text-xs text-zinc-400">
-                    Leadership Backed by Technical Experience
+                    IT Coordinator · Project Coordination · Full-Stack Dev
                   </p>
                 </div>
 

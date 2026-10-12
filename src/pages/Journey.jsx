@@ -16,7 +16,19 @@ const phases = [
   },
   {
     title: "Future Direction",
-    desc: "Now focused on project management, business analysis, operations, and client-facing roles where technical understanding is a major advantage.",
+    desc: "Focused on IT coordination, project management, and development roles where technical understanding is a major advantage.",
+  },
+  {
+    title: "AI Automation",
+    desc: "Delving deeper into AI: automating business processes with n8n and building systems with Claude, from AI-assisted development to AI-powered features.",
+  },
+  {
+    title: "Project Management",
+    desc: "Serving as Assistant Project Manager on ARTMS, an AI-enhanced recruitment and HR records system for Accel4U Business Solutions. I've established myself as a leader who won't compromise on quality while looking after the efficiency and work-life balance of developers.",
+  },
+  {
+    title: "IT Coordinator at Sancy Solutions",
+    desc: "Now putting it all together in industry: coordinating software development projects, tracking tasks and deliverables, and acting as the bridge between clients, stakeholders, and developers.",
   },
 ];
 
@@ -38,7 +50,7 @@ export default function Journey() {
               key={i}
               className="rounded-3xl p-6 bg-white/5 border border-white/10"
             >
-              <p className="text-purple-300 text-sm">0{i + 1}</p>
+              <p className="text-purple-300 text-sm">{String(i + 1).padStart(2, "0")}</p>
               <h2 className="text-2xl font-semibold mt-2">{item.title}</h2>
               <p className="text-zinc-300 mt-4 leading-8">{item.desc}</p>
             </div>

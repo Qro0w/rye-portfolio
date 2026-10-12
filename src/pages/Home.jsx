@@ -22,9 +22,10 @@ export default function Home() {
             </h1>
 
             <p className="text-zinc-300 mt-6 leading-8 max-w-xl">
-              A BSIT candidate with real experience in leadership,
-              project coordination, communication, and technical execution.
-              Built projects, led organizations, and helped turn ideas into results.
+              IT Coordinator intern at Sancy Solutions and BSIT student at
+              Southwestern University PHINMA. I coordinate development projects,
+              connect clients with developers, and build full-stack systems with
+              React, Supabase, Firebase, and AI-assisted development with Claude.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
@@ -54,9 +55,9 @@ export default function Home() {
             {/* METRICS */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
               {[
-                ["6+", "Projects"],
-                ["2+", "Leadership Roles"],
-                ["5+", "Certificates"],
+                ["7+", "Projects"],
+                ["7", "Workshops Led"],
+                ["6", "Certifications"],
                 ["100+", "People Engaged"],
               ].map(([num, label], i) => (
                 <div
@@ -87,10 +88,10 @@ export default function Home() {
         {/* CREDIBILITY STRIP */}
         <div className="grid md:grid-cols-4 gap-4 mt-6">
           {[
-            "CEO of SwuDevs",
-            "Built Real Systems",
-            "Workshop Leader",
-            "Open to Opportunities",
+            "IT Coordinator @ Sancy Solutions",
+            "Former CEO of SwuDevs",
+            "Assistant PM, ARTMS Capstone",
+            "Full-Stack + AI-Assisted Dev",
           ].map((item, i) => (
             <div
               key={i}

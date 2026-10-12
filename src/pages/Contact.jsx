@@ -2,12 +2,12 @@ import React from "react";
 import PageTransition from "../components/PageTransition";
 
 const roles = [
+  "IT Coordinator",
+  "Technical Project Coordinator",
   "Project Manager",
+  "Full-Stack / Software Developer",
   "Business Analyst",
-  "Product Owner",
   "Technical Liaison",
-  "Client Success / Account Roles",
-  "Operations / Team Leadership",
 ];
 
 const contacts = [
@@ -87,8 +87,8 @@ export default function Contact() {
           </h2>
 
           <p className="mt-4 text-zinc-400 max-w-2xl leading-8">
-            Open to internships, leadership opportunities, project coordination,
-            business analyst roles, and client-facing technology work.
+            Open to IT coordination, technical project coordination, and
+            developer roles, along with client-facing technology work.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">

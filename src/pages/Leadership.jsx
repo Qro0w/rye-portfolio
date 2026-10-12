@@ -3,6 +3,14 @@ import PageTransition from "../components/PageTransition";
 
 const leadershipAreas = [
   {
+    title: "IT Coordination",
+    desc: "As IT Coordinator at Sancy Solutions, coordinate development projects and serve as the liaison between clients, stakeholders, and developers.",
+  },
+  {
+    title: "Project Management",
+    desc: "Assistant Project Manager on ARTMS, supporting the 20-week project plan, system flowcharts, risk and mitigation planning, the stakeholder pitch, and client-run User Acceptance Testing.",
+  },
+  {
     title: "Organization Leadership",
     desc: "Served as CEO of SwuDevs, guiding direction, managing initiatives, and helping members grow through technical opportunities.",
   },
